@@ -1,5 +1,13 @@
 # D-FLIPDLOP-NEGEDGE
 
+
+
+
+NAME : SONA.S
+
+RegisterNumber:21224110049
+
+
 **AIM:**
 
 To implement  D flipflop using verilog and validating their functionality using their functional tables
@@ -56,12 +64,7 @@ end
 endmodule
 ```
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
 
-Developed by: SONA.S
-
-RegisterNumber:21224110049
-*/
 
 **RTL LOGIC FOR FLIPFLOPS**
 
