@@ -50,18 +50,18 @@ Next state of D flip-flop is always equal to data input, D for every positive tr
 **PROGRAM**
 
 ```
-module exp8(D,clk,Q,Qbar);
-input D,clk;
-output reg Q;
-output reg Qbar;
-initial Q=0;
-initial Qbar=1;
-always @(posedge clk)
-begin
-Q=D;
-Qbar=~D;
-end
+module Exp08 (d, clk, rst, q);
+  input d, clk, rst;
+  output reg q;
+
+  always @(negedge clk or posedge rst) begin
+    if (rst)
+      q <= 0; // Reset the flip-flop
+    else
+      q <= d; // D input is passed to Q on the negative clock edge
+  end
 endmodule
+
 ```
 
 
@@ -73,7 +73,8 @@ endmodule
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
-![WhatsApp Image 2025-05-05 at 14 35 19_9c30656e](https://github.com/user-attachments/assets/0b2a2bdc-5d70-423e-9f7b-2e3a863764c5)
+![Screenshot (144)](https://github.com/user-attachments/assets/22dc8b2b-b725-4d18-afb5-586abaa87089)
+
 
 **RESULTS**
 
